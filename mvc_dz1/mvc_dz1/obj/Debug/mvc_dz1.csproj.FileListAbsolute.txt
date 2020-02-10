@@ -51,6 +51,8 @@ C:\Users\Иван\source\repos\mvc_dz1\mvc_dz1\bin\roslyn\vbc.rsp
 C:\Users\Иван\source\repos\mvc_dz1\mvc_dz1\bin\roslyn\VBCSCompiler.exe
 C:\Users\Иван\source\repos\mvc_dz1\mvc_dz1\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\Иван\source\repos\mvc_dz1\mvc_dz1\bin\Antlr3.Runtime.dll
+C:\Users\Иван\source\repos\mvc_dz1\mvc_dz1\bin\EntityFramework.dll
+C:\Users\Иван\source\repos\mvc_dz1\mvc_dz1\bin\EntityFramework.SqlServer.dll
 C:\Users\Иван\source\repos\mvc_dz1\mvc_dz1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\Иван\source\repos\mvc_dz1\mvc_dz1\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\Иван\source\repos\mvc_dz1\mvc_dz1\bin\Newtonsoft.Json.dll
@@ -62,6 +64,8 @@ C:\Users\Иван\source\repos\mvc_dz1\mvc_dz1\bin\System.Web.WebPages.Deploymen
 C:\Users\Иван\source\repos\mvc_dz1\mvc_dz1\bin\System.Web.WebPages.dll
 C:\Users\Иван\source\repos\mvc_dz1\mvc_dz1\bin\System.Web.WebPages.Razor.dll
 C:\Users\Иван\source\repos\mvc_dz1\mvc_dz1\bin\WebGrease.dll
+C:\Users\Иван\source\repos\mvc_dz1\mvc_dz1\bin\EntityFramework.xml
+C:\Users\Иван\source\repos\mvc_dz1\mvc_dz1\bin\EntityFramework.SqlServer.xml
 C:\Users\Иван\source\repos\mvc_dz1\mvc_dz1\bin\Newtonsoft.Json.xml
 C:\Users\Иван\source\repos\mvc_dz1\mvc_dz1\bin\System.Web.Helpers.xml
 C:\Users\Иван\source\repos\mvc_dz1\mvc_dz1\bin\System.Web.Mvc.xml
@@ -79,7 +83,9 @@ C:\Users\Иван\source\repos\mvc_dz1\mvc_dz1\bin\ru\System.Web.Razor.resources
 C:\Users\Иван\source\repos\mvc_dz1\mvc_dz1\bin\ru\System.Web.WebPages.resources.dll
 C:\Users\Иван\source\repos\mvc_dz1\mvc_dz1\bin\ru\System.Web.WebPages.Deployment.resources.dll
 C:\Users\Иван\source\repos\mvc_dz1\mvc_dz1\bin\ru\System.Web.WebPages.Razor.resources.dll
-C:\Users\Иван\source\repos\mvc_dz1\mvc_dz1\obj\Debug\mvc_dz1.csprojAssemblyReference.cache
 C:\Users\Иван\source\repos\mvc_dz1\mvc_dz1\obj\Debug\mvc_dz1.csproj.CopyComplete
 C:\Users\Иван\source\repos\mvc_dz1\mvc_dz1\obj\Debug\mvc_dz1.dll
 C:\Users\Иван\source\repos\mvc_dz1\mvc_dz1\obj\Debug\mvc_dz1.pdb
+C:\Users\Иван\source\repos\mvc_dz1\mvc_dz1\obj\Debug\mvc_dz1.csprojAssemblyReference.cache
+C:\Users\Иван\source\repos\mvc_dz1\mvc_dz1\bin\CustomLibrary.dll
+C:\Users\Иван\source\repos\mvc_dz1\mvc_dz1\bin\CustomLibrary.pdb

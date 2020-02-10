@@ -33,3 +33,13 @@ textarea {
     color: red;
 }
 
+
+
+#main {
+    min-height: 80vh;
+}
+
+#footerId {
+    border-top: .05rem solid #e5e5e5;
+    background-color: #f9f9f9;
+}

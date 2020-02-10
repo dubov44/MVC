@@ -8,12 +8,15 @@ namespace mvc_dz1.App_Code
 {
     public static class CustomUlHelper
     {
+        //хелпер для создания опросника
 		public static MvcHtmlString CreateUl(this HtmlHelper html, List<string> items, string name)
 		{
+            //создаем столбцы
 			var ol = new TagBuilder("ol");
 			ol.MergeAttribute("name", name);
             ol.AddCssClass("list-unstyled");
 
+            //создаем строки
             foreach (string item in items)
 			{
 				var li = new TagBuilder("li");

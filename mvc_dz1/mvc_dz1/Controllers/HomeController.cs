@@ -1,49 +1,23 @@
-﻿using System;
+﻿using mvc_dz1.Context;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using CustomLibrary;
 
 namespace mvc_dz1.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        public ActionResult Index() //главная страница
         {
-            return View();
-        }
-
-        public ActionResult Guest(string Name, string Text)
-        {
-            ViewBag.AddText = false;
-            if(!string.IsNullOrWhiteSpace(Name) && !string.IsNullOrWhiteSpace(Text))
+            var list = new List<Post>(); //все посты
+            using (var context = new ProjectContext())
             {
-                ViewBag.AddText = true;
-                ViewBag.Name = Name;
-                ViewBag.Text = Text;
+                list = context.Posts.ToList();
             }
-
-            return View();
-        }
-
-
-        [HttpGet]
-        public ActionResult Form()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
-
-        [HttpPost]
-        public ActionResult Form(FormCollection form)
-        {
-            ViewBag.Person = form["Name"] + " " + form["Surname"];
-            ViewBag.Sex = form["gender"];
-            ViewBag.Languages = form["check"];
-
-
-            return View("~/Views/Home/Result.cshtml");
+            return View(list);
         }
     }
 }

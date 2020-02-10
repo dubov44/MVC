@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29728.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mvc_dz1", "mvc_dz1\mvc_dz1.csproj", "{E6FC82F1-9C7D-413D-8E28-FBC65AAB7FFD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomLibrary", "CustomLibrary\CustomLibrary.csproj", "{82EC72C1-7237-4C1A-A806-D6C37492CC21}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{E6FC82F1-9C7D-413D-8E28-FBC65AAB7FFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E6FC82F1-9C7D-413D-8E28-FBC65AAB7FFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E6FC82F1-9C7D-413D-8E28-FBC65AAB7FFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82EC72C1-7237-4C1A-A806-D6C37492CC21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82EC72C1-7237-4C1A-A806-D6C37492CC21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82EC72C1-7237-4C1A-A806-D6C37492CC21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82EC72C1-7237-4C1A-A806-D6C37492CC21}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
