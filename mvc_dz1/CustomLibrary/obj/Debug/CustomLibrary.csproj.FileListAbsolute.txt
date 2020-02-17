@@ -1,4 +1,0 @@
-C:\Users\Иван\source\repos\mvc_dz1\CustomLibrary\bin\Debug\CustomLibrary.dll
-C:\Users\Иван\source\repos\mvc_dz1\CustomLibrary\bin\Debug\CustomLibrary.pdb
-C:\Users\Иван\source\repos\mvc_dz1\CustomLibrary\obj\Debug\CustomLibrary.dll
-C:\Users\Иван\source\repos\mvc_dz1\CustomLibrary\obj\Debug\CustomLibrary.pdb

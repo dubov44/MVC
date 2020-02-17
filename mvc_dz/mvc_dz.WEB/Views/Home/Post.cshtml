@@ -1,0 +1,35 @@
+﻿@model mvc_dz.DAL.Tables.Post
+    @using mvc_dz.DAL.Tables
+
+@{
+    ViewBag.Title = "Post";
+}
+
+@section Body {
+    <div class="card mb-4">
+        <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+        <div class="card-body">
+            <h2 class="card-title">@Model.Title</h2>
+            <p class="card-text">@Model.Content</p>
+            @if (Model.Tags.Count() != 0)
+            {
+                <div class="card-text"><b>Tags</b></div>
+                <ul>
+                    @foreach (Tag c in Model.Tags)
+                    {
+                        <li>@c.Name</li>
+                    }
+                </ul>
+            }
+            else
+            {
+                <div class="card-text"><b>There are no tags on this post</b></div>
+            }
+        </div>
+        <div class="card-footer text-muted">
+            Posted: @Model.Date by
+            <a href="#">RTRDD (@Model.AuthorId)</a>
+        </div>
+    </div>
+    }
+

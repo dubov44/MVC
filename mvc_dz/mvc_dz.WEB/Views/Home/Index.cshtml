@@ -1,0 +1,66 @@
+﻿@model mvc_dz.WEB.Models.IndexViewModel<Post>
+@using mvc_dz.DAL.Tables;
+@using mvc_dz.WEB.App_Code
+@using System.Web.Mvc.Html;
+@{
+    ViewBag.Title = "Home Page";
+}
+
+@section Body {
+    <h1 class="my-4">
+        Заголовок
+    </h1>
+
+    @foreach (var item in Model.Posts)
+    {
+        <div class="card mb-4">
+            <div class="card-body">
+                <h2 class="card-title">@item.Title</h2>
+                <p class="card-text">@item.Content.Substring(0, 100)...</p>
+                <a href="@Url.Action("Post", "Home", new { id = item.PostId })" class="btn btn-primary">Read More →</a>
+            </div>
+        </div>
+    }
+
+
+    <div class="btn-group">
+        @Html.PageLinks(Model.Pager, x => Url.Action("Index", new { page = x }))
+    </div>
+
+    
+
+}
+
+@section Questions {
+    <div class="card my-4">
+        <h5 class="card-header">Пройди анкету</h5>
+        <div class="card-body">
+            <div class="container">
+                @using (Html.BeginForm())
+                {
+                    <div class="form-group">
+                        @Html.TextBox("Name", null, new { @class = "form-control", placeholder = "Name" })
+                    </div>
+                    <div class="form-group">
+                        @Html.TextBox("Surname", null, new { @class = "form-control", placeholder = "Surname" })
+                    </div>
+                    <div class="form-group">
+                        <p>Укажите пол</p>
+                        @Html.RadioButton("gender", "male")
+                        <span>Мужской</span><br />
+                        @Html.RadioButton("gender", "female")
+                        <span>Женский</span><br />
+                    </div>
+                    <div class="form-group">
+                        <p>Выберите языки</p>
+                        @Html.CreateUl(new List<string>() { "c#", "java", "php", "python", "ruby" }, "name")
+                    </div>
+                    <input type="submit" name="Button" value="Submit" class="btn btn-primary btn-sm"/>
+                }
+            <div><a href="@Url.Action("Answers", "Home")" class="btn btn-secondary btn-sm mt-1">Show all results</a></div>
+            </div>
+
+            </div>
+        </div>
+    </div>
+    }

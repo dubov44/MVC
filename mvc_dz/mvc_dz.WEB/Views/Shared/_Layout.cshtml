@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    @Styles.Render("~/Content/bootstrap.min.css")
+    @Styles.Render("~/Content/Site.css")
+    <link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+            <a href="@Url.Action("Index", "Home")" class="navbar-brand"><i class="fas fa-wheelchair d-inline-block align-top"></i>RTRDD Blog</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a href="#" class="nav-link">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">О нас</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Контакты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Сервисы</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Команда</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main id="main">
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-8">
+
+                    @RenderSection("Body")
+
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <div class="card my-4">
+                        <h5 class="card-header">Pages</h5>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col">
+                                    <ul class="list-unstyled mb-0">
+                                        <li>
+                                            <a href="@Url.Action("Index", "Home")">Home</a>
+                                        </li>
+                                        <li>
+                                            <a href="@Url.Action("Index", "Review")">Guest</a>
+                                        </li>
+                                        <li>
+                                            <a href="@Url.Action("Index", "Questionary")">Form</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    @RenderSection("Questions", false)
+
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+    <footer id="footerId" class="footer mt-auto py-3">
+        <div class="container inner">
+            <p class="float-right"><a href="#">Back to top</a></p>
+            <p>&copy; 2020 RTRDD</p>
+        </div>
+    </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
