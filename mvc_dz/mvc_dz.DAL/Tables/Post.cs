@@ -23,6 +23,7 @@ namespace mvc_dz.DAL.Tables
 
         [Required]
         public int AuthorId { get; set; }
+        public bool isVisible { get; set; }
         public virtual Author Autor { get; set; }
 
         public Post()

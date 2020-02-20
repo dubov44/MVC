@@ -1,4 +1,4 @@
-﻿@model mvc_dz.WEB.Models.IndexViewModel<Review>
+﻿@model mvc_dz.WEB.Models.IndexViewModel<Review, Review>
 @using mvc_dz.DAL.Tables;
 @using mvc_dz.WEB.App_Code
 @using System.Web.Mvc.Html;
@@ -11,13 +11,12 @@
     <div class="container mt-4">
             @using (Html.BeginForm())
             {
-                    @Html.ValidationSummary()
+                    @Html.ValidationSummary(true)
                     <div class="form-group">
                         @Html.TextBoxFor(m => m.Model.Name, new
                    {
                        placeholder = "Name",
-                       @class = "form-control",
-                       required = ""
+                       @class = "form-control"
                    })
                         @*@Html.EditorFor(m => m.Model.Name)*@
                         @Html.ValidationMessageFor(m => m.Model.Name)
@@ -26,8 +25,7 @@
                         @Html.TextBoxFor(m => m.Model.ReviewText, new
                    {
                        placeholder = "Text",
-                       @class = "form-control",
-                       required = ""
+                       @class = "form-control"
                    })
                         @*@Html.EditorFor(m => m.Model.ReviewText)*@
                         @Html.ValidationMessageFor(m => m.Model.ReviewText)

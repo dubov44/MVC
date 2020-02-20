@@ -1,12 +1,16 @@
 ﻿@model mvc_dz.DAL.Tables.Post
-    @using mvc_dz.DAL.Tables
+@using mvc_dz.DAL.Tables
 
 @{
     ViewBag.Title = "Post";
 }
 
 @section Body {
-    <div class="card mb-4">
+    <div class="container mt-4 ml-0">
+        <a href="@Url.Action("Edit", "Home", new { id = Model.PostId })" class="btn btn-secondary">Edit</a>
+        <a href="@Url.Action("DeletePost", "Home", new { id = Model.PostId })" class="btn btn-secondary">Delete</a>
+    </div>
+    <div class="card mt-2 mb-4">
         <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
         <div class="card-body">
             <h2 class="card-title">@Model.Title</h2>
@@ -17,7 +21,9 @@
                 <ul>
                     @foreach (Tag c in Model.Tags)
                     {
-                        <li>@c.Name</li>
+                        <li>
+                            <a href="@Url.Action("Tags", "Home", new { item = c.Name})">@c.Name</a>
+                        </li>
                     }
                 </ul>
             }
@@ -31,5 +37,5 @@
             <a href="#">RTRDD (@Model.AuthorId)</a>
         </div>
     </div>
-    }
+}
 

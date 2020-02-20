@@ -16,7 +16,7 @@ namespace mvc_dz.DAL.Repository
 
         public SqlTagRepository(ProjectContext db)
         {
-            this.db = new ProjectContext();
+            this.db = db;
         }
 
         public IEnumerable<Tag> GetItemList()

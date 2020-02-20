@@ -119,6 +119,10 @@
     <Compile Include="Migrations\202002170006160_rewiewChDb.designer.cs">
       <DependentUpon>202002170006160_rewiewChDb.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202002201847487_reqDb.cs" />
+    <Compile Include="Migrations\202002201847487_reqDb.designer.cs">
+      <DependentUpon>202002201847487_reqDb.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\SqlAuthorRepository.cs" />
@@ -162,6 +166,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202002170006160_rewiewChDb.resx">
       <DependentUpon>202002170006160_rewiewChDb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002201847487_reqDb.resx">
+      <DependentUpon>202002201847487_reqDb.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

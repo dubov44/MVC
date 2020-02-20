@@ -49,3 +49,5 @@ C:\Users\Иван\source\repos\mvc_dz\mvc_dz.DAL\obj\Debug\mvc_dz.DAL.csproj.Gen
 C:\Users\Иван\source\repos\mvc_dz\mvc_dz.DAL\obj\Debug\mvc_dz.DAL.csproj.CopyComplete
 C:\Users\Иван\source\repos\mvc_dz\mvc_dz.DAL\obj\Debug\CustomLibrary.dll
 C:\Users\Иван\source\repos\mvc_dz\mvc_dz.DAL\obj\Debug\CustomLibrary.pdb
+C:\Users\Иван\source\repos\mvc_dz\mvc_dz.DAL\obj\Debug\mvc_dz.DAL.csprojAssemblyReference.cache
+C:\Users\Иван\source\repos\mvc_dz\mvc_dz.DAL\obj\Debug\CustomLibrary.Migrations.reqDb.resources

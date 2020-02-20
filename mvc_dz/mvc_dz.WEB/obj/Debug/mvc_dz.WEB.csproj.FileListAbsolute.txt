@@ -198,3 +198,5 @@ C:\Users\Иван\source\repos\mvc_dz\mvc_dz.WEB\obj\Debug\mvc_dz.WEB.csprojAsse
 C:\Users\Иван\source\repos\mvc_dz\mvc_dz.WEB\obj\Debug\mvc_dz.WEB.csproj.CopyComplete
 C:\Users\Иван\source\repos\mvc_dz\mvc_dz.WEB\obj\Debug\mvc_dz1.dll
 C:\Users\Иван\source\repos\mvc_dz\mvc_dz.WEB\obj\Debug\mvc_dz1.pdb
+C:\Users\Иван\source\repos\mvc_dz\mvc_dz.WEB\bin\mvc_dz.BLL.dll
+C:\Users\Иван\source\repos\mvc_dz\mvc_dz.WEB\bin\mvc_dz.BLL.pdb

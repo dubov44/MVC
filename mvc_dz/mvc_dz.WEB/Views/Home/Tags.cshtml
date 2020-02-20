@@ -1,0 +1,50 @@
+﻿@model mvc_dz.WEB.Models.IndexViewModel<Post, Tag>
+@using mvc_dz.DAL.Tables
+@using mvc_dz.WEB.App_Code
+@using System.Web.Mvc.Html;
+@{
+    /**/
+
+    ViewBag.Title = "Tags";
+}
+
+@section Body {
+    <div class="mt-4">
+        <h2>Tag: @Model.Additionary.Name</h2>
+        @foreach (var t in Model.Posts)
+        {
+            <div class="card mb-4 mt-4">
+                <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+                <div class="card-body">
+                    <h2 class="card-title">@t.Title</h2>
+                    <p class="card-text">@t.Content</p>
+                    @if (t.Tags.Count() != 0)
+                    {
+                        <div class="card-text"><b>Tags</b></div>
+                        <ul>
+                            @foreach (Tag c in t.Tags)
+                            {
+                                <li>
+                                    <a href="@Url.Action("Tags", "Home", new { item = c.Name})">@c.Name</a>
+                                </li>
+                            }
+                        </ul>
+                    }
+                    else
+                    {
+                        <div class="card-text"><b>There are no tags on this post</b></div>
+                    }
+                    <a href="@Url.Action("Post", "Home", new { id = t.PostId })" class="btn btn-outline-secondary">To post →</a>
+                </div>
+                <div class="card-footer text-muted">
+                    Posted: @t.Date by
+                    <a href="#">RTRDD (@t.AuthorId)</a>
+                </div>
+            </div>
+        }
+    </div>
+
+    <div class="btn-group">
+        @Html.PageLinks(Model.Pager, x => Url.Action("Tags", new { item = Model.Additionary.Name, page = x }))
+    </div>
+}

@@ -7,6 +7,7 @@ using System.Web;
 using System.Web.Mvc;
 using mvc_dz.DAL;
 using mvc_dz.WEB.Models;
+using mvc_dz.Bll.BusinessModels;
 
 namespace mvc_dz.WEB.Controllers
 {
@@ -22,7 +23,7 @@ namespace mvc_dz.WEB.Controllers
 
             var pager = new Pager(unitOfWork.Reviews.GetItemList().ToList().Count(), page, 1, 3);
 
-            var viewModel = new IndexViewModel<Review>
+            var viewModel = new IndexViewModel<Review, Review>
             {
                 Posts = unitOfWork.Reviews.GetItemList().OrderByDescending(x => x.ReviewId).ToList().Skip((pager.CurrentPage - 1) * pager.PageSize).Take(pager.PageSize).ToList(),
                 Pager = pager,
@@ -32,7 +33,7 @@ namespace mvc_dz.WEB.Controllers
             return View(viewModel);
         }
 
-        public RedirectResult AddReview(IndexViewModel<Review> review) //добавление комментария
+        public RedirectResult AddReview(IndexViewModel<Review, Review> review) //добавление комментария
         {
             if (string.IsNullOrWhiteSpace(review.Model.Name))
             {

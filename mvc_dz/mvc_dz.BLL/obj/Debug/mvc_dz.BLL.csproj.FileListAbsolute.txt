@@ -1,0 +1,5 @@
+C:\Users\Иван\source\repos\mvc_dz\mvc_dz.BLL\bin\Debug\mvc_dz.BLL.dll
+C:\Users\Иван\source\repos\mvc_dz\mvc_dz.BLL\bin\Debug\mvc_dz.BLL.pdb
+C:\Users\Иван\source\repos\mvc_dz\mvc_dz.BLL\obj\Debug\mvc_dz.BLL.csprojAssemblyReference.cache
+C:\Users\Иван\source\repos\mvc_dz\mvc_dz.BLL\obj\Debug\mvc_dz.BLL.dll
+C:\Users\Иван\source\repos\mvc_dz\mvc_dz.BLL\obj\Debug\mvc_dz.BLL.pdb

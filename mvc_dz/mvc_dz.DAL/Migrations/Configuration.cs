@@ -21,10 +21,10 @@
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method
             //  to avoid creating duplicate seed data.
             
-            foreach(var i in context.Authors)
-            {
-                i.Login = "und";
-            }
+            //foreach(var i in context.Posts)
+            //{
+            //    i.isVisible = true;
+            //}
         }
     }
 }

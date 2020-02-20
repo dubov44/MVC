@@ -1,4 +1,4 @@
-﻿@model mvc_dz.WEB.Models.IndexViewModel<Post>
+﻿@model mvc_dz.WEB.Models.IndexViewModel<Post, Post>
 @using mvc_dz.DAL.Tables;
 @using mvc_dz.WEB.App_Code
 @using System.Web.Mvc.Html;
@@ -7,19 +7,32 @@
 }
 
 @section Body {
-    <h1 class="my-4">
-        Заголовок
-    </h1>
+    <div class="container mt-4 mb-2">
+        <a><h1>
+            All posts
+        </h1></a>
+        <a href="@Url.Action("AddPost", "Home")" class="btn btn-secondary">Create new post</a>
+    </div>
 
     @foreach (var item in Model.Posts)
     {
-        <div class="card mb-4">
-            <div class="card-body">
-                <h2 class="card-title">@item.Title</h2>
-                <p class="card-text">@item.Content.Substring(0, 100)...</p>
-                <a href="@Url.Action("Post", "Home", new { id = item.PostId })" class="btn btn-primary">Read More →</a>
+        if (item.isVisible == true)
+        {
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h2 class="card-title">@item.Title</h2>
+                    @if (item.Content.Length > 100)
+                    {
+                        <p class="card-text">@item.Content.Substring(0, 100)...</p>
+                    }
+                    else
+                    {
+                        <p class="card-text">@item.Content</p>
+                    }
+                    <a href="@Url.Action("Post", "Home", new { id = item.PostId })" class="btn btn-primary">Read More →</a>
+                </div>
             </div>
-        </div>
+        }
     }
 
 
@@ -27,7 +40,7 @@
         @Html.PageLinks(Model.Pager, x => Url.Action("Index", new { page = x }))
     </div>
 
-    
+
 
 }
 
@@ -55,12 +68,12 @@
                         <p>Выберите языки</p>
                         @Html.CreateUl(new List<string>() { "c#", "java", "php", "python", "ruby" }, "name")
                     </div>
-                    <input type="submit" name="Button" value="Submit" class="btn btn-primary btn-sm"/>
+                    <input type="submit" name="Button" value="Submit" class="btn btn-primary btn-sm" />
                 }
-            <div><a href="@Url.Action("Answers", "Home")" class="btn btn-secondary btn-sm mt-1">Show all results</a></div>
+                <div><a href="@Url.Action("Answers", "Home")" class="btn btn-secondary btn-sm mt-1">Show all results</a></div>
             </div>
 
-            </div>
         </div>
     </div>
-    }
+    </div>
+}

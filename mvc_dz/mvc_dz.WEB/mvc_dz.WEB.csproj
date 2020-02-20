@@ -158,7 +158,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\IndexViewModel.cs" />
-    <Compile Include="Models\Pager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -300,12 +299,15 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
-    <Content Include="Views\Review\Index.cshtml" />
     <Content Include="Views\Questionary\Index.cshtml" />
     <Content Include="Views\Questionary\Result.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Post.cshtml" />
     <Content Include="Views\Home\Answers.cshtml" />
+    <Content Include="Views\Review\Index.cshtml" />
+    <Content Include="Views\Home\Tags.cshtml" />
+    <Content Include="Views\Home\AddPost.cshtml" />
+    <Content Include="Views\Home\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -322,6 +324,10 @@
     <TypeScriptCompile Include="Scripts\index.d.ts" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\mvc_dz.BLL\mvc_dz.BLL.csproj">
+      <Project>{6d90e5c3-be00-4ddf-bb47-ac2178d8f59a}</Project>
+      <Name>mvc_dz.BLL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\mvc_dz.DAL\mvc_dz.DAL.csproj">
       <Project>{82ec72c1-7237-4c1a-a806-d6c37492cc21}</Project>
       <Name>mvc_dz.DAL</Name>
